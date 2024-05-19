@@ -1,7 +1,7 @@
 import "@/app/styles/globals.css";
-import { Roboto as FontSans } from "next/font/google";
-import { Metadata } from "next";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
+import { Roboto as FontSans } from "next/font/google";
 
 const fontSans = FontSans({
   subsets: ["latin"],
