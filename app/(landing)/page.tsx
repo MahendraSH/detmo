@@ -10,7 +10,7 @@ interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
   return (
-    <div className="bg-background py-10 flex flex-col justify-center items-center gap-8">
+    <div className="bg-background py-10 p-2   flex flex-col justify-center items-center gap-8">
       {/* hero section  */}
       <section className="flex flex-col justify-center md:p-3 p-2 container max-w-screen-md  text-center  gap-5">
         <h1 className=" text-3xl md:text-4xl lg:text-5xl font-bold text-wrap md:px-4 px-2 ">
@@ -208,7 +208,7 @@ const page: FC<pageProps> = ({}) => {
       <Separator className="bg-primary" />
       {/* profile company section  */}
       <section
-        className="flex flex-col justify-center md:p-20 p-2 container 
+        className="flex flex-col justify-center md:p-20 container 
        mx-auto  text-center  gap-6 items-center"
       >
         {/* <h3 className="text-lg"> </h3> */}
