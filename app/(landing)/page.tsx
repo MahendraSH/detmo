@@ -51,7 +51,7 @@ const page: FC<pageProps> = ({}) => {
       >
         <h3 className="text-lg"> Empowering Procurement By</h3>
         <article className="flex flex-col md:flex-row justify-stretch items-start gap-20 w-full">
-          <Card className="w-96 md:w-1/3  aspect-video flex justify-center items-center align-middle">
+          <Card className="w-full md:w-1/3  aspect-video flex justify-center items-center align-middle">
             <Button variant="ghost" className="p-5 h-12 rounded-full">
               <VideoIcon className="w-5 h-5 " />
             </Button>
@@ -168,7 +168,7 @@ const page: FC<pageProps> = ({}) => {
               </tbody>
             </table>
           </div>
-          <Card className="w-96 md:w-1/3  aspect-video flex justify-center items-center align-middle">
+          <Card className="w-full md:w-1/3  aspect-video flex justify-center items-center align-middle">
             <Button variant="ghost" className="p-5 h-12 rounded-full">
               <VideoIcon className="w-5 h-5 " />
             </Button>
