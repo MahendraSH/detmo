@@ -37,11 +37,41 @@ const page: FC<pageProps> = ({}) => {
       <section className="flex flex-col justify-center md:p-3 p-2 container text-center  gap-5">
         <h3 className="text-lg">Trusted by Procurement Managers Worldwide</h3>
         <div className="flex justify-center items-center gap-3 flex-wrap">
-          <Image src="/trust/zoom.svg" alt="logo" width={180} height={80} />
-          <Image src="/trust/avatar.svg" alt="logo" width={180} height={80} />
-          <Image src="/trust/ui-path.svg" alt="logo" width={180} height={80} />
-          <Image src="/trust/fast.svg" alt="logo" width={180} height={80} />
-          <Image src="/trust/axon.svg" alt="logo" width={180} height={80} />
+          <Image
+            src="/trust/zoom.svg"
+            alt="logo"
+            width={180}
+            height={80}
+            className="w-24 md:w-44"
+          />
+          <Image
+            src="/trust/avatar.svg"
+            alt="logo"
+            width={180}
+            height={80}
+            className="w-24 md:w-44"
+          />
+          <Image
+            src="/trust/ui-path.svg"
+            alt="logo"
+            width={180}
+            height={80}
+            className="w-24 md:w-44"
+          />
+          <Image
+            src="/trust/fast.svg"
+            alt="logo"
+            width={180}
+            height={80}
+            className="w-24 md:w-44"
+          />
+          <Image
+            src="/trust/axon.svg"
+            alt="logo"
+            width={180}
+            height={80}
+            className="w-24 md:w-44"
+          />
         </div>
       </section>
       {/* video section */}
