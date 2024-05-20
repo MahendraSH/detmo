@@ -19,7 +19,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
     >
       <Image src="/logo.svg" alt="logo" width={100} height={100} />
       <nav
-        className="hidden  md:flex gap-x-6 justify-end items-center ml-auto bg-card
+        className="hidden  md:flex gap-x-6 justify-end items-center ml-auto bg-muted
        text-card-foreground rounded-md p-1"
       >
         <Button variant={"ghost"} size={"sm"} className="px-4">
@@ -37,7 +37,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         <Button size="lg"> Start Free Trial</Button>
       </nav>
       <nav
-        className="flex md:hidden gap-x-6 justify-end items-center ml-auto bg-card
+        className="flex md:hidden gap-x-6 justify-end items-center ml-auto bg-muted
        text-card-foreground rounded-md p-1"
       >
         <Button variant={"ghost"} size={"sm"} className="px-4">

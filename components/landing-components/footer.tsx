@@ -1,6 +1,13 @@
 import Image from "next/image";
 import { FC } from "react";
 import { Button } from "../ui/button";
+import {
+  DiscordLogoIcon,
+  GitHubLogoIcon,
+  InstagramLogoIcon,
+  LinkedInLogoIcon,
+  TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 
 interface FooterProps {}
 
@@ -13,21 +20,20 @@ const Footer: FC<FooterProps> = ({}) => {
 
           <div className="flex mt-8 space-x-6 md:mt-0">
             {/* social accounts */}
-            <Button variant={"ghost"} size={"sm"}>
-              {" "}
-              Github{" "}
+            <Button variant={"ghost"} size={"icon"}>
+              <LinkedInLogoIcon className="w-5 h-5" />
             </Button>
-            <Button variant={"ghost"} size={"sm"}>
-              {" "}
-              Twitter{" "}
+            <Button variant={"ghost"} size={"icon"}>
+              <TwitterLogoIcon className="w-5 h-5" />
             </Button>
-            <Button variant={"ghost"} size={"sm"}>
-              {" "}
-              LinkedIn{" "}
+            <Button variant={"ghost"} size={"icon"}>
+              <InstagramLogoIcon className="w-5 h-5" />
             </Button>
-            <Button variant={"ghost"} size={"sm"}>
-              {" "}
-              Discord{" "}
+            <Button variant={"ghost"} size={"icon"}>
+              <DiscordLogoIcon className="w-5 h-5" />
+            </Button>
+            <Button variant={"ghost"} size={"icon"}>
+              <GitHubLogoIcon className="w-5 h-5" />
             </Button>
           </div>
         </div>
