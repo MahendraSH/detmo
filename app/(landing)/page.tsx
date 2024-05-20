@@ -57,7 +57,7 @@ const page: FC<pageProps> = ({}) => {
             </Button>
           </Card>
           {/* list of pointes here */}
-          <div className="max-w-[50%]">
+          <div className="md:max-w-[50%]">
             <h3 className="text-2xl text-primary">Spend Analysis</h3>
             <table className="w-full table-auto">
               <thead>
@@ -114,7 +114,7 @@ const page: FC<pageProps> = ({}) => {
         </article>
         <article className="flex flex-col md:flex-row justify-stretch items-start gap-20 w-full">
           {/* list of pointes here */}
-          <div className="max-w-[50%]">
+          <div className="md:max-w-[50%]">
             <h3 className="text-2xl text-primary">Sourcing Projects</h3>
             <table className="w-full table-auto">
               <thead>
