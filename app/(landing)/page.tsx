@@ -17,7 +17,7 @@ const page: FC<pageProps> = ({}) => {
           Unlock the <span className="text-destructive/60"> Power</span> of
           Efficient Procurement
         </h1>
-        <h2 className="text-lg text-wrap font-normal">
+        <h2 className="  md:text-lg text-wrap font-normal">
           Seamlessly Manage Orders and Discover the Perfect Suppliers with Our
           Advanced Procurement Software
         </h2>
