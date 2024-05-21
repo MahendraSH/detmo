@@ -1,12 +1,15 @@
 import { Button } from "@/components/ui/button";
+import { auth } from "@clerk/nextjs/server";
 import { VideoIcon } from "@radix-ui/react-icons";
 import { LucidePlay } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
+  const { userId } = auth();
   return (
     <div className="bg-background pt-10 p-2   flex flex-col justify-center items-center gap-8">
       {/* hero section  */}
@@ -20,7 +23,13 @@ const page: FC<pageProps> = ({}) => {
           Advanced Procurement Software
         </h2>
         <div className="flex justify-center items-center gap-3">
-          <Button size="lg"> Start Free Trial</Button>
+          {!userId ? (
+            <Link href="/sign-in">
+              <Button size="lg"> Start Free Trial</Button>
+            </Link>
+          ) : (
+            <Button size="lg">Dashboard</Button>
+          )}
           <Button size="lg" variant="outline">
             <VideoIcon className="w-5 h-5 mr-3" />
             View Demo

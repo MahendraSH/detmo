@@ -8,10 +8,14 @@ import {
   MoveIcon,
 } from "@radix-ui/react-icons";
 import Sidebar from "./sidebar";
+import { SignInButton, UserButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
+import Link from "next/link";
 
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
+  const { userId } = auth();
   return (
     <div
       className=" flex justify-start items-center w-full md:p-4 p-2 min-h-20 bg-background 
@@ -31,10 +35,25 @@ const Navbar: FC<NavbarProps> = ({}) => {
         <Button variant={"ghost"} size={"sm"} className="px-4">
           Pricing
         </Button>
-        <Button variant={"ghost"} size={"sm"} className="px-4">
-          Log in
-        </Button>
-        <Button size="lg"> Start Free Trial</Button>
+        {!userId ? (
+          <Link href="/sign-in">
+            <Button variant={"ghost"} size={"sm"} className="px-4">
+              {/* <SignInButton>Log in</SignInButton> */}
+              Login
+            </Button>
+          </Link>
+        ) : (
+          <UserButton />
+        )}
+        {!userId ? (
+          <Link href="/sign-up">
+            <Button size="lg"> Start Free Trial</Button>
+          </Link>
+        ) : (
+          <Link href="/dashboard">
+            <Button size="lg"> Dashboard</Button>
+          </Link>
+        )}
       </nav>
       <nav
         className="flex md:hidden gap-x-6 justify-end items-center ml-auto bg-muted
