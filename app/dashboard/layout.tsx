@@ -1,19 +1,7 @@
+"use client";
 import Link from "next/link";
-import {
-  Bell,
-  CircleUser,
-  Home,
-  LineChart,
-  Menu,
-  Package,
-  Package2,
-  Search,
-  SettingsIcon,
-  ShoppingCart,
-  Users,
-} from "lucide-react";
+import { Menu, MenuIcon, Package, Search, SettingsIcon } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -23,10 +11,10 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import { UserButton } from "@clerk/nextjs";
+import SearchBox from "@/components/dashboard/searchbox";
 
 export default function Dashboard({ children }: { children: React.ReactNode }) {
   return (
@@ -38,7 +26,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
               <Image src="/logo.svg" alt="logo" width={100} height={100} />
             </Link>
             <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
-              <Bell className="h-4 w-4" />
+              <MenuIcon className="h-4 w-4" />
               <span className="sr-only">Toggle notifications</span>
             </Button>
           </div>
@@ -144,16 +132,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
             </SheetContent>
           </Sheet>
           <div className="w-full flex-1">
-            <form>
-              <div className="relative">
-                <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-                <Input
-                  type="search"
-                  placeholder="Search products..."
-                  className="w-full appearance-none bg-background pl-8 shadow-none md:w-2/3 lg:w-1/3"
-                />
-              </div>
-            </form>
+            <SearchBox />
           </div>
           <UserButton />{" "}
         </header>
