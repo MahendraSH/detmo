@@ -28,7 +28,9 @@ const page: FC<pageProps> = ({}) => {
               <Button size="lg"> Start Free Trial</Button>
             </Link>
           ) : (
-            <Button size="lg">Dashboard</Button>
+            <Link href="/dashboard/spend-analysis">
+              <Button size="lg">Dashboard</Button>
+            </Link>
           )}
           <Button size="lg" variant="outline">
             <VideoIcon className="w-5 h-5 mr-3" />
