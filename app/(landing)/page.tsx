@@ -1,8 +1,6 @@
-import Navbar from "@/components/landing-components/navbar";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { VideoIcon } from "@radix-ui/react-icons";
+import { LucidePlay } from "lucide-react";
 import Image from "next/image";
 import { FC } from "react";
 
@@ -10,7 +8,7 @@ interface pageProps {}
 
 const page: FC<pageProps> = ({}) => {
   return (
-    <div className="bg-background py-10 p-2   flex flex-col justify-center items-center gap-8">
+    <div className="bg-background pt-10 p-2   flex flex-col justify-center items-center gap-8">
       {/* hero section  */}
       <section className="flex flex-col justify-center md:p-3 p-2 container max-w-screen-md  text-center  gap-5">
         <h1 className=" text-3xl md:text-4xl lg:text-5xl font-bold text-wrap md:px-4 px-2 ">
@@ -76,140 +74,93 @@ const page: FC<pageProps> = ({}) => {
       </section>
       {/* video section */}
       <section
-        className="flex flex-col justify-center  md:px-20 md:mx-10 p-5 w-full
+        className="flex flex-col justify-center p-5 w-full
         align-middle  md:container mx-auto  text-center  gap-6 items-center bg-muted rounded-md"
       >
-        <h3 className="text-lg"> Empowering Procurement By</h3>
-        <article className="flex flex-col md:flex-row justify-stretch items-start gap-20 w-full">
-          <Card className="w-full md:w-1/3  aspect-video flex justify-center items-center align-middle">
-            <Button variant="ghost" className="p-5 h-12 rounded-full">
-              <VideoIcon className="w-5 h-5 " />
-            </Button>
-          </Card>
-          {/* list of pointes here */}
-          <div className="md:max-w-[50%]">
-            <h3 className="text-2xl text-primary">Spend Analysis</h3>
-            <table className="w-full table-auto">
-              <thead>
-                <tr>
-                  <th className="w-10"></th>
-                  <th></th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td className="w-10">
-                    <Image
-                      src="/pointer.svg"
-                      alt="logo"
-                      width={24}
-                      height={24}
-                    />
-                  </td>
-                  <td className="text-lg text-start">
-                    Gain Deeper Insights into Your Spending Patterns.
-                  </td>
-                </tr>
-                <tr>
-                  <td className="w-10">
-                    <Image
-                      src="/pointer.svg"
-                      alt="logo"
-                      width={24}
-                      height={24}
-                    />
-                  </td>
-                  <td className="text-lg text-start">
-                    Analyze Spending by Suppliers, Months, Commodities, and
-                    Locations.{" "}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="w-10">
-                    <Image
-                      src="/pointer.svg"
-                      alt="logo"
-                      width={24}
-                      height={24}
-                    />
-                  </td>
-                  <td className="text-lg text-start">
-                    Maximize Cost Savings and Optimize Budget Allocation.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+        <div className="container px-5 py-24 mx-auto flex flex-col gap-4">
+          <div className="text-center mb-20 ">
+            <h2 className=" text-2xl font-medium text-center title-font ">
+              Empowering Procurement Excellence by{" "}
+            </h2>
           </div>
-        </article>
-        <article className="flex flex-col md:flex-row justify-stretch items-start gap-20 w-full">
-          {/* list of pointes here */}
-          <div className="md:max-w-[50%]">
-            <h3 className="text-2xl text-primary">Sourcing Projects</h3>
-            <table className="w-full table-auto">
-              <thead>
-                <tr>
-                  <th className="w-10"></th>
-                  <th></th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td className="w-10">
-                    <Image
-                      src="/pointer.svg"
-                      alt="logo"
-                      width={24}
-                      height={24}
-                    />
-                  </td>
-                  <td className="text-lg text-start">
-                    Find the Ideal Supplier for Your Unique Projects.{" "}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="w-10">
-                    <Image
-                      src="/pointer.svg"
-                      alt="logo"
-                      width={24}
-                      height={24}
-                    />
-                  </td>
-                  <td className="text-lg text-start">
-                    Simplify Sourcing with Part Numbers and Descriptions.{" "}
-                  </td>
-                </tr>
-                <tr>
-                  <td className="w-10">
-                    <Image
-                      src="/pointer.svg"
-                      alt="logo"
-                      width={24}
-                      height={24}
-                    />
-                  </td>
-                  <td className="text-lg text-start">
+          <article className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+            <div className="p-2 sm:w-1/2 w-full">
+              <iframe
+                className="rounded-lg p-1 border-2 border-secondary w-full aspect-video max-w-[450px] shadow-md bg-muted-foreground"
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <div className="p-2 sm:w-1/2 w-full text-start  ">
+              {/* subtitle */}
+              <h3 className="text-xl font-medium title-font mb-4 text-destructive/70">
+                Spend Analysis
+              </h3>
+              <div className="flex flex-col gap-3 py-4">
+                <div className="bg-muted rounded flex   items-center">
+                  <LucidePlay className="size-4 mr-3 fill-foreground" />
+                  <span className="text-secondary-foreground">
+                    Gain Deeper Insights into Your Spending Patterns.
+                  </span>
+                </div>
+                <div className="bg-muted rounded flex  items-center">
+                  <LucidePlay className="size-4 mr-3 fill-foreground" />
+                  <span className="text-secondary-foreground">
+                    Analyze Spending by Suppliers, Months, Commodities, and
+                    Locations.
+                  </span>
+                </div>
+                <div className="bg-muted rounded flex  items-center">
+                  <LucidePlay className="size-4 mr-3 fill-foreground" />
+                  <span className="text-secondary-foreground">
+                    Maximize Cost Savings and Optimize Budget Allocation.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article className="flex flex-row-reverse flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+            <div className="p-2 sm:w-1/2 w-full">
+              <iframe
+                className="rounded-lg p-1 border-2 border-secondary w-full aspect-video max-w-[450px] shadow-md bg-muted-foreground"
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+            <div className="p-2 sm:w-1/2 w-full text-start  ">
+              {/* subtitle */}
+              <h3 className="text-xl font-medium title-font mb-4 text-destructive/70">
+                Sourcing Projects
+              </h3>
+              <div className="flex flex-col gap-3 py-4">
+                <div className="bg-muted rounded flex   items-center">
+                  <LucidePlay className="size-4 mr-3 fill-foreground" />
+                  <span className="text-secondary-foreground">
+                    Find the Ideal Supplier for Your Unique Projects.
+                  </span>
+                </div>
+                <div className="bg-muted rounded flex  items-center">
+                  <LucidePlay className="size-4 mr-3 fill-foreground" />
+                  <span className="text-secondary-foreground">
+                    Simplify Sourcing with Part Numbers and Descriptions.
+                  </span>
+                </div>
+                <div className="bg-muted rounded flex  items-center">
+                  <LucidePlay className="size-4 mr-3 fill-foreground" />
+                  <span className="text-secondary-foreground">
                     Ensure Optimal Supplier Selection Based on Cost, Quality,
                     and Delivery.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <Card className="w-full md:w-1/3  aspect-video flex justify-center items-center align-middle">
-            <Button variant="ghost" className="p-5 h-12 rounded-full">
-              <VideoIcon className="w-5 h-5 " />
-            </Button>
-          </Card>
-        </article>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
       </section>
-      <Separator className="bg-primary" />
       {/* profile company section  */}
       <section
         className="flex flex-col justify-center md:p-20 container 
-       mx-auto  text-center  gap-6 items-center"
+       mx-auto  text-center  gap-6 items-center "
       >
         {/* <h3 className="text-lg"> </h3> */}
         <article className="flex flex-col md:flex-row justify-stretch items-start gap-20">
@@ -248,18 +199,19 @@ const page: FC<pageProps> = ({}) => {
           </div>
         </article>
       </section>
-      <Separator className="bg-primary" />
 
       {/* footer hero section */}
-      <section className="flex flex-col justify-center md:p-3 p-2 container max-w-screen-md  text-center  gap-5">
-        <h1 className=" text-3xl md:text-4xl lg:text-5xl font-bold text-wrap md:px-4 px-2 ">
-          Experience Next-Level Procurement Efficiency!{" "}
-        </h1>
+      <div className="bg-muted w-full py-8">
+        <section className="flex flex-col justify-center md:p-3 p-2 container max-w-screen-md  text-center  gap-5 ">
+          <h1 className=" text-3xl md:text-4xl lg:text-5xl font-bold text-wrap md:px-4 px-2 ">
+            Experience Next-Level Procurement Efficiency!{" "}
+          </h1>
 
-        <div className="flex justify-center items-center gap-3">
-          <Button size="lg"> Start Free Trial</Button>
-        </div>
-      </section>
+          <div className="flex justify-center items-center gap-3">
+            <Button size="lg"> Start Free Trial</Button>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

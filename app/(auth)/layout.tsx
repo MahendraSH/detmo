@@ -8,9 +8,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <Navbar />
-      <main className=" md:mx-auto pt-20">{children}</main>
-      <Footer />
+      <main className=" min-h-screen justify-center items-center flex ">
+        {children}
+      </main>
     </>
   );
 }

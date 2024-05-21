@@ -409,6 +409,6 @@ export const searchProjects = [
 
   {
     name: "Project 7",
-    description: "Description 7",
+    description: "Description 7", 
   },
 ];
