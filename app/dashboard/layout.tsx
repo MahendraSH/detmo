@@ -15,40 +15,50 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import { UserButton } from "@clerk/nextjs";
 import SearchBox from "@/components/dashboard/searchbox";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Dashboard({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
   return (
-    <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
-      <div className="hidden border-r bg-muted/40 md:block">
+    <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
+      <div className="hidden border-r bg-muted/40 lg:block">
         <div className="flex h-full max-h-screen flex-col gap-2">
           <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
               <Image src="/logo.svg" alt="logo" width={100} height={100} />
             </Link>
-            <Button variant="outline" size="icon" className="ml-auto h-8 w-8">
-              <MenuIcon className="h-4 w-4" />
-              <span className="sr-only">Toggle notifications</span>
-            </Button>
           </div>
           <div className="flex-1">
             <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
               <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg bg-muted px-3 py-2 text-primary transition-all hover:text-primary"
+                href="/dashboard/spend-analysis"
+                className={cn(
+                  "flex items-center gap-3 rounded-lg  px-3 py-2 text-muted-foreground transition-all hover:text-primary",
+                  pathname.includes("/spend-analysis") &&
+                    " text-primary bg-muted",
+                )}
               >
                 <Package className="h-4 w-4" />
                 Spend Analysis
               </Link>
               <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                href="/dashboard/projects"
+                className={cn(
+                  "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary",
+                  pathname.includes("/projects") && "bg-muted text-primary",
+                )}
               >
                 <Package className="h-4 w-4" />
                 All Projects
               </Link>
               <Link
-                href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                href="/dashboard/settings"
+                className={cn(
+                  "flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary",
+                  pathname.includes("/settings") && "bg-muted text-primary",
+                )}
               >
                 <SettingsIcon className="h-4 w-4" />
                 Settings
@@ -80,7 +90,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
               <Button
                 variant="outline"
                 size="icon"
-                className="shrink-0 md:hidden"
+                className="shrink-0 lg:hidden"
               >
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle navigation menu</span>
@@ -92,22 +102,32 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                   <Image src="/logo.svg" alt="logo" width={100} height={100} />
                 </Link>
                 <Link
-                  href="#"
-                  className="flex items-center gap-3 rounded-lg bg-muted px-1 py-2 text-primary transition-all hover:text-primary"
+                  href="/dashboard/spend-analysis"
+                  className={cn(
+                    "flex items-center gap-3 rounded-lg  px-1 py-2 text-muted-foreground transition-all hover:text-primary",
+                    pathname.includes("/spend-analysis") &&
+                      " text-primary bg-muted",
+                  )}
                 >
                   <Package className="h-4 w-4" />
                   Spend Analysis
                 </Link>
                 <Link
-                  href="#"
-                  className="flex items-center gap-3 rounded-lg px-1 py-2 text-muted-foreground transition-all hover:text-primary"
+                  href="/dashboard/projects"
+                  className={cn(
+                    "flex items-center gap-3 rounded-lg px-1 py-2 text-muted-foreground transition-all hover:text-primary",
+                    pathname.includes("/projects") && "bg-muted text-primary",
+                  )}
                 >
                   <Package className="h-4 w-4" />
                   All Projects
                 </Link>
                 <Link
-                  href="#"
-                  className="flex items-center gap-3 rounded-lg px-1 py-2 text-muted-foreground transition-all hover:text-primary"
+                  href="/dashboard/settings"
+                  className={cn(
+                    "flex items-center gap-3 rounded-lg px-1 py-2 text-muted-foreground transition-all hover:text-primary",
+                    pathname.includes("/settings") && "bg-muted text-primary",
+                  )}
                 >
                   <SettingsIcon className="h-4 w-4" />
                   Settings

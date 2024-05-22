@@ -18,7 +18,7 @@ const Footer: FC<FooterProps> = ({}) => {
         <div className="py-8 md:flex md:items-center md:justify-between">
           <Image src="/logo.svg" alt="logo" width={100} height={100} />
 
-          <div className="flex mt-8 space-x-6 md:mt-0">
+          <div className="flex mt-8 space-x-6 md:mt-0 md:hidden">
             {/* social accounts */}
             <Button variant={"ghost"} size={"icon"}>
               <LinkedInLogoIcon className="w-5 h-5" />
@@ -35,6 +35,14 @@ const Footer: FC<FooterProps> = ({}) => {
             <Button variant={"ghost"} size={"icon"}>
               <GitHubLogoIcon className="w-5 h-5" />
             </Button>
+          </div>
+          <div className=" hidden md:flex space-x-6 mt-8 md:mt-0 ">
+            {/* social accounts */}
+            <Button variant={"ghost"}>LinkedIn</Button>
+            <Button variant={"ghost"}>Twitter</Button>
+            <Button variant={"ghost"}>Instagram</Button>
+            <Button variant={"ghost"}>Discord</Button>
+            <Button variant={"ghost"}>GitHub</Button>
           </div>
         </div>
       </div>
