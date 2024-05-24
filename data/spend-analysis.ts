@@ -138,27 +138,13 @@ export const spendingByCommodity = [
 
 //  spending by location
 export const spendingByLocation = [
-  {
-    name: "Location 1",
-    Spend: 1000,
-  },
-  {
-    name: "Location 2",
-    Spend: 2000,
-  },
-  {
-    name: "Location 3",
-    Spend: 3000,
-  },
-  {
-    name: "Location 4",
-    Spend: 4000,
-  },
-  {
-    name: "Location 5",
-    Spend: 5000,
-  },
+  { name: "Location 1", vendorName: "Vendor 1", Spend: 1000 },
+  { name: "Location 2", vendorName: "Vendor 2", Spend: 2000 },
+  { name: "Location 3", vendorName: "Vendor 3", Spend: 3000 },
+  { name: "Location 4", vendorName: "Vendor 4", Spend: 4000 },
+  { name: "Location 5", vendorName: "Vendor 5", Spend: 5000 },
 ];
+
 // line chart data
 //  spending by month
 export const spendingByMonth = [
@@ -409,6 +395,6 @@ export const searchProjects = [
 
   {
     name: "Project 7",
-    description: "Description 7", 
+    description: "Description 7",
   },
 ];
