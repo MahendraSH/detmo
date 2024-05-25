@@ -1,4 +1,5 @@
-import { FC } from "react";
+import CardHeaders from "@/components/dashboard/spend-analysis-comp/cards-headers";
+import SpendActions from "@/components/dashboard/spend-analysis-comp/spend-actions";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -7,9 +8,8 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
-import CardHeaders from "@/components/dashboard/spend-analysis-comp/cards-headers";
 import { DollarSign } from "lucide-react";
+import { FC } from "react";
 
 interface SpendAnalysisProps {}
 
@@ -27,21 +27,8 @@ const SpendAnalysis: FC<SpendAnalysisProps> = ({}) => {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <div className=" flex md:flex-row flex-col justify-between items-center gap-4 py-4">
-        <h1 className=" md:text-3xl sm:text-2xl text-xl font-medium">
-          Spend Analysis{" "}
-        </h1>
-        <div className="flex gap-6 md:flex-row flex-col">
-          <div className=" flex gap-x-4 justify-center items-center">
-            <Button variant={"ghost"}>demo1</Button>
-            <Button variant={"ghost"}>demo2</Button>
-          </div>
-          <div className=" flex gap-x-4 justify-center items-center">
-            <Button variant="outline">demo1</Button>
-            <Button variant="outline">demo2</Button>
-          </div>
-        </div>
-      </div>
+      <SpendActions />
+
       {/* cards */}
       <div className="grid   gap-4  grid-cols-1 sm:grid-cols-2  md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5">
         <CardHeaders
