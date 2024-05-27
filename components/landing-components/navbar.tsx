@@ -66,7 +66,10 @@ const Navbar: FC<NavbarProps> = ({}) => {
             </Button>
           </Link>
         ) : (
-          <UserButton />
+          <UserButton
+            afterMultiSessionSingleSignOutUrl="/"
+            afterSignOutUrl="/"
+          />
         )}
         <Sidebar />
       </nav>
